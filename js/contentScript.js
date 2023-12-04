@@ -35,7 +35,7 @@ getStorage().get('settings', storage => {
             let playerView = document.querySelector(".stream-content .plyr");
             if (playerView) {
                 if (settings['automatic_play']) {
-                    playerView.scrollIntoView();
+                    playerView.scrollIntoView({behavior: "smooth", block: "center"});
 
                     // playerView.requestFullscreen();
                     playerView.dispatchEvent(new KeyboardEvent("keydown", {
@@ -107,7 +107,7 @@ function processBSPayer(settings) {
     let playerView = document.querySelector("section.serie .hoster-player");
     if (playerView) {
         if (settings['automatic_play']) {
-            playerView.scrollIntoView();
+            playerView.scrollIntoView({behavior: "smooth", block: "center"});
 
             playerView.dispatchEvent(new MouseEvent("click", {
                 bubbles: true,
