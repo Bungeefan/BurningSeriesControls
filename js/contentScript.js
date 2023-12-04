@@ -56,20 +56,20 @@ getStorage().get('settings', storage => {
 
                     let previousDiv = document.createElement("div");
                     previousDiv.classList.add("bs-btn-container", "previous-bs-btn-container");
-                    previousDiv.appendChild(control_previous);
+                    previousDiv.append(control_previous);
 
                     let middleDiv = document.createElement("div");
                     middleDiv.classList.add("middle-bs-btn-container");
 
                     let nextDiv = document.createElement("div");
                     nextDiv.classList.add("bs-btn-container", "next-bs-btn-container");
-                    nextDiv.appendChild(control_next);
+                    nextDiv.append(control_next);
 
                     let parentBtnDiv = document.createElement("div");
                     parentBtnDiv.classList.add("bs-bt-parent-container");
-                    parentBtnDiv.appendChild(previousDiv);
-                    parentBtnDiv.appendChild(middleDiv);
-                    parentBtnDiv.appendChild(nextDiv);
+                    parentBtnDiv.append(previousDiv);
+                    parentBtnDiv.append(middleDiv);
+                    parentBtnDiv.append(nextDiv);
 
                     document.body.insertBefore(parentBtnDiv, document.querySelector("#root"));
 
@@ -132,13 +132,13 @@ function addLastWatchedSeries() {
             lastWatchedSeriesA.href = lastWatchedSeries;
             lastWatchedSeriesA.title = "Letzte Serie fortsetzen";
             lastWatchedSeriesA.innerText = "Letzte Serie fortsetzen (" + seriesName + ")";
-            lastWatchedSeriesLi.appendChild(lastWatchedSeriesA);
+            lastWatchedSeriesLi.append(lastWatchedSeriesA);
 
             // let customDeleteBtn = document.createElement("span");
             // customDeleteBtn.classList.add("close", "display-right", "hover-red", "hover-opacity");
             // customDeleteBtn.innerText = "&#10006;";
             // customDeleteBtn.title = "Entfernen";
-            // lastWatchedSeriesLi.appendChild(customDeleteBtn);
+            // lastWatchedSeriesLi.append(customDeleteBtn);
 
             let element = document.querySelector("#other-series-nav > ul");
             if (element) {
